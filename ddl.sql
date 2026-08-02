@@ -17,3 +17,15 @@ CREATE TABLE aircrafts (
     
     FOREIGN KEY (dealership_id) REFERENCES dealership (id)
 );
+
+ALTER TABLE dealership ADD phone_number CHAR(16);
+ALTER TABLE aircrafts MODIFY color CHAR(36) NOT NULL;
+ALTER TABLE dealership DROP COLUMN fax_number;
+DROP TABLE boats;
+INSERT INTO dealership
+VALUE (null, 'totoya', '123 jupiter avenue', null, '123 456 789');
+SELECT * FROM dealership;
+SELECT dealership_name, address FROM dealership;
+INSERT INTO aircrafts
+VALUE (null, 1, 'airbus', 'white', 'trent900');
+TRUNCATE TABLE dealership;
